@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+//==========================================================================
 public class SimpleFormTests extends BasePage {
 
     private SimpleFormPage simpleFormPage;
@@ -15,9 +16,7 @@ public class SimpleFormTests extends BasePage {
         super.setUp();
         simpleFormPage = new SimpleFormPage(driver);
     }
-
-    //Text
-
+    //==========================================================================
     @Test(priority = 1)
     public void enterMessageAndClickGetCheckedValue() {
         driver.findElement(simpleFormDemoLink).click();
