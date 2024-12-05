@@ -30,7 +30,11 @@ public class CheckBoxTests extends BasePage {
     @Description("Click 'Check All', 'Uncheck All', Option 1, Option 2, Option 3, Option 4 And See If This Functions Work")
     @Test(priority = 2)
     public void clickOnAllOptionsFromMultipleCheckBox() {
+
+        checkBoxPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(CHECK_BOX_DEMO_LINK_TEXT).click();
+
         checkBoxPage.clickOnCheckAllButton();
         checkBoxPage.clickOnUncheckAllButton();
         checkBoxPage.clickOnFirstOptionMultipleCheckBox();
@@ -38,8 +42,8 @@ public class CheckBoxTests extends BasePage {
         checkBoxPage.clickOnThirdOptionMultipleCheckBox();
         checkBoxPage.clickOnFourthOptionMultipleCheckBox();
 
-        String actualResult1 = driver.findElement(By.cssSelector("#box")).getAccessibleName();
-        Assert.assertEquals(actualResult1,"Check All");
+            String actualResult1 = driver.findElement(By.cssSelector("#box")).getAccessibleName();
+            Assert.assertEquals(actualResult1, "Check All");
 
-    }
+        }
 }

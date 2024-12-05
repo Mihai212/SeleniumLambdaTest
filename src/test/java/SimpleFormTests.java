@@ -19,7 +19,10 @@ public class SimpleFormTests extends BasePage {
     //==========================================================================
     @Test(priority = 1)
     public void enterMessageAndClickGetCheckedValue() {
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterTextInTextField("Test");
         simpleFormPage.clickOnGetCheckedValueButton();
 
@@ -32,7 +35,10 @@ public class SimpleFormTests extends BasePage {
 
     @Test(priority = 2)
     public void enterSymbolsAndClickGetCheckedValue() {
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterTextInTextField("!@#$%^&*()_-+=");
         simpleFormPage.clickOnGetCheckedValueButton();
 
@@ -44,7 +50,10 @@ public class SimpleFormTests extends BasePage {
 
     @Test(priority = 3)
     public void enterNumbersAndClickGetCheckedValue() {
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterTextInTextField("12345");
         simpleFormPage.clickOnGetCheckedValueButton();
 
@@ -56,7 +65,10 @@ public class SimpleFormTests extends BasePage {
 
     @Test(priority = 4)
     public void enterSpacesAndClickGetCheckedValue() {
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterTextInTextField("   ");
         simpleFormPage.clickOnGetCheckedValueButton();
 
@@ -67,7 +79,10 @@ public class SimpleFormTests extends BasePage {
 
     @Test (priority = 5)
     public void enterLettersNumbersAndSymbolsAndClickGetCheckedValue(){
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterTextInTextField("abcd1234!@#$");
         simpleFormPage.clickOnGetCheckedValueButton();
         String actualResult5 = driver.findElement(By.id("message")).getText();
@@ -78,7 +93,10 @@ public class SimpleFormTests extends BasePage {
 
     @Test(priority = 6)
     public void enterTwoIntegersValuesAndGetTheSum() {
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterValueInFirstField("5");
         simpleFormPage.enterValueInSecondField("5");
         simpleFormPage.clickOnGetTotalValueButton();
@@ -89,7 +107,10 @@ public class SimpleFormTests extends BasePage {
 
     @Test(priority = 7)
     public void enterTwoNegativeIntegersValuesAndGetTheSum() {
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterValueInFirstField("-3");
         simpleFormPage.enterValueInSecondField("-2");
         simpleFormPage.clickOnGetTotalValueButton();
@@ -100,7 +121,10 @@ public class SimpleFormTests extends BasePage {
 
     @Test(priority = 8)
     public void enterTwoNonIntegersValuesAndGetTheSum() {
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterValueInFirstField("6.5");
         simpleFormPage.enterValueInSecondField("2.5");
         simpleFormPage.clickOnGetTotalValueButton();
@@ -111,7 +135,10 @@ public class SimpleFormTests extends BasePage {
 
     @Test(priority = 9)
     public void enterTwoIntegersValuesInFirstFieldAndTwoIntegersValuesInSecondFieldAndGetTheSum() {
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterValueInFirstField("2+3");
         simpleFormPage.enterValueInSecondField("6+4");
         simpleFormPage.clickOnGetTotalValueButton();
@@ -122,7 +149,10 @@ public class SimpleFormTests extends BasePage {
 
     @Test(priority = 10)
     public void enterNumbersAndSymbolsShouldBeAnError() {
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterValueInFirstField("1@!3");
         simpleFormPage.enterValueInSecondField("5");
         simpleFormPage.clickOnGetTotalValueButton();
@@ -133,7 +163,10 @@ public class SimpleFormTests extends BasePage {
 
     @Test (priority = 11)
     public void enterSymbolsAndGetASumShouldNotBePossible() {
+        simpleFormPage.clickOnAllowCookiesButtonPageOne();
+
         driver.findElement(simpleFormDemoLink).click();
+
         simpleFormPage.enterValueInFirstField("@");
         simpleFormPage.enterValueInSecondField("@");
         simpleFormPage.clickOnGetTotalValueButton();

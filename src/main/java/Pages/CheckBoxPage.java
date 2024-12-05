@@ -1,9 +1,15 @@
 package Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
 
 public class CheckBoxPage extends BasePage {
     //========================================================================
@@ -11,7 +17,16 @@ public class CheckBoxPage extends BasePage {
         super(driver);
         PageFactory.initElements(driver, this);
     }
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
+    //========================================================================
+    @FindBy (xpath = "//*[@id=\"CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\"]")
+    private WebElement allowCookiesButtonPageOne;
+
+    public void clickOnAllowCookiesButtonPageOne(){
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\"]")));
+        allowCookiesButtonPageOne.click();
+    }
     //========================================================================
     @FindBy(id = "isAgeSelected")
     private WebElement singleCheckBox;
